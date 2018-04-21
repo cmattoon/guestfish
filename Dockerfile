@@ -15,7 +15,8 @@ ENV LIBGUESTFS_TRACE 0
 RUN apt-get update \
     && apt-get install -y \
        linux-image-generic \
-       libguestfs-tools
+       libguestfs-tools \
+    && rm -rf /var/lib/apt/lists/*
 
 VOLUME ["/work"]
 
