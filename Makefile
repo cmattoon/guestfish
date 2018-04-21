@@ -1,7 +1,13 @@
+PREFIX=/usr/local
 IMG_NAME=guestfish
 IMG_TAG=latest
 IMG_REPO=cmattoon
 DOCKERFILE_DIR=.
+
+.PHONY: install
+install:
+	cp scripts/guestfi.sh $(PREFIX)/bin/guestfi.sh
+	chmod +x $(PREFIX)/bin/guestfi.sh
 
 .PHONY: container
 container:

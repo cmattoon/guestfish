@@ -3,6 +3,14 @@ cmattoon/guestfish
 
 This image provides the `guestfish` program from `libguestfs`
 
+Install
+-------
+
+To "install", run `make install`, or copy the `guestfi.sh` script to `$PATH` and make it executable:
+
+    cp scripts/guestfi.sh /usr/local/bin/guestfi.sh
+    chmod +x /usr/local/bin/guestfi.sh
+
 
 Usage
 -----

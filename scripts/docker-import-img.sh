@@ -13,7 +13,7 @@ DST_FILE="import-me.tgz"
 KEEP_TAR=${KEEP_TAR:-"nope"}
 
 echo " [+] Converting $SRC_IMG to $DST_FILE"
-./guestfi.sh --ro -a "/work/$SRC_IMG" -m /dev/sda2:/ tar-out / "$DST_FILE"
+guestfi.sh --ro -a "/work/$SRC_IMG" -m /dev/sda2:/ tar-out / "$DST_FILE"
 
 test -f "$DST_FILE" || { echo "Failed to create tarball" && exit 1; }
 
